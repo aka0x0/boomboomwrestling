@@ -107,6 +107,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &106178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 463568}
+  - 65: {fileID: 6546390}
+  m_Layer: 0
+  m_Name: ScramTrigger
+  m_TagString: Scram
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &106466
 GameObject:
   m_ObjectHideFlags: 1
@@ -1960,7 +1976,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138970}
-  m_LocalRotation: {x: .709194601, y: -.0204108823, z: .704529822, w: .0162591767}
+  m_LocalRotation: {x: .709194541, y: -.0204108804, z: .704529762, w: .0162591748}
   m_LocalPosition: {x: -.00103104115, y: -2.21519658e-05, z: .000570300384}
   m_LocalScale: {x: .999999881, y: 1, z: 1}
   m_Children:
@@ -2135,14 +2151,26 @@ Transform:
   - {fileID: 496394}
   m_Father: {fileID: 446040}
   m_RootOrder: 0
+--- !u!4 &463568
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106178}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 1.24000001, z: .920000017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 463634}
+  m_RootOrder: 12
 --- !u!4 &463634
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 2.19000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 408848}
@@ -2157,6 +2185,7 @@ Transform:
   - {fileID: 485760}
   - {fileID: 477104}
   - {fileID: 448126}
+  - {fileID: 463568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &464426
@@ -2594,6 +2623,18 @@ Transform:
   - {fileID: 425950}
   m_Father: {fileID: 434084}
   m_RootOrder: 0
+--- !u!65 &6546390
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &8219696
 AudioSource:
   m_ObjectHideFlags: 1

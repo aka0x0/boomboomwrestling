@@ -28,7 +28,7 @@ public class ThirdPersonController : MonoBehaviour
 
     private Animation _animation;
 
-  
+    private int counts;
 
     public CharacterState _characterState;
 
@@ -333,6 +333,23 @@ public class ThirdPersonController : MonoBehaviour
     }
 
     Vector3 velocity = Vector3.zero;
+//ƒgƒŠƒK[‚ÌŽÀŒ±
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Scram")
+        {
+            
+            counts++;
+            print(other.name);
+            if (counts >= 100)
+            {
+                Vector3 test = other.transform.position;
+                transform.LookAt(test);
+                m_Animator.SetBool("Shoryuken", true);
+                print("yeah");
+            }
+        }
+    }
 
     void Update()
     {        

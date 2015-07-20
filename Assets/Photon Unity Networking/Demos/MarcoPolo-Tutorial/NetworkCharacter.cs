@@ -31,7 +31,9 @@ public class NetworkCharacter : Photon.MonoBehaviour
 			stream.SendNext(anim.GetFloat("Speed"));
 			stream.SendNext(anim.GetFloat("Direction"));
 			stream.SendNext(anim.GetBool("Punch_L"));
-			//stream.SendNext(anim.GetBool("Punch_R"));
+			stream.SendNext(anim.GetBool("LowKick"));
+            stream.SendNext(anim.GetBool("HiKick"));
+            stream.SendNext(anim.GetBool("Shoryuken"));
 
             myThirdPersonController myC = GetComponent<myThirdPersonController>();
             stream.SendNext((int)myC._characterState);
@@ -45,9 +47,14 @@ public class NetworkCharacter : Photon.MonoBehaviour
 			anim.SetFloat("Speed",(float)stream.ReceiveNext());
 			anim.SetFloat("Direction",(float)stream.ReceiveNext());
 			anim.SetBool("Punch_L",(bool)stream.ReceiveNext());
-			anim.SetBool("Punch_R",(bool)stream.ReceiveNext());
-			myThirdPersonController myC = GetComponent<myThirdPersonController>();
+			anim.SetBool("LowKick",(bool)stream.ReceiveNext());
+            anim.SetBool("HiKick", (bool)stream.ReceiveNext());
+            anim.SetBool("Shoryuken", (bool)stream.ReceiveNext());
+			
+            myThirdPersonController myC = GetComponent<myThirdPersonController>();
             myC._characterState = (CharacterState)stream.ReceiveNext();
         }
     }
-}
+ 
+    }
+
